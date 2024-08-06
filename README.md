@@ -65,13 +65,6 @@ Create a Streamlit app for interactive predictions (`app.py`).
     git push -u origin main
     ```
 
-## Submission Requirements
-
-- Python scripts in the `src/` folder
-- Streamlit app code in `app.py`
-- Model files in the `models/` folder
-- A `README.md` file documenting the project
-
 ## Sample Prediction Web Page
  Provided is a screenshot of how the Streamlit app looks and functions.
 ![Web page](https://github.com/user-attachments/assets/aa9cef02-0c42-4db6-9ab7-b0ab7ced3eeb)

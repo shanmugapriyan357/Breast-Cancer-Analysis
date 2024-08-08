@@ -31,23 +31,40 @@ This repository contains the code and resources for the Breast Cancer Analysis p
 
 ## Data Preparation
 
-Load and preprocess the dataset.
+The dataset is loaded from the sklearn.datasets library, and basic preprocessing steps are performed:
+
+Load Dataset: The dataset is loaded using load_breast_cancer() from sklearn.datasets.
+Data Preparation: The dataset is split into features and target variables.
+Feature Scaling: Features are scaled using StandardScaler to normalize the data.
 
 ## Feature Selection
 
-Implement feature selection using `SelectKBest`.
+Feature selection is implemented to improve the model's performance by reducing dimensionality:
+
+SelectKBest: The SelectKBest method from sklearn.feature_selection is used to select the top features based on univariate statistical tests. In this project, the top 10 features are selected to improve the efficiency and accuracy of the model.
 
 ## Model Training and Tuning
 
-Train and tune the model using Grid Search CV.
+A machine learning model is trained and optimized using grid search:
+
+Model Training: An MLPClassifier (Multi-layer Perceptron) is trained on the selected features.
+Hyperparameter Tuning: Grid Search with Cross-Validation (GridSearchCV) is used to find the best hyperparameters for the model. Various parameters, including hidden layer sizes, activation functions, solvers, and learning rates, are tested to find the optimal configuration.
 
 ## Save the Model
 
-Save the trained model.
+The trained model, along with the preprocessing tools, is saved for future use:
+
+Model Saving: The trained MLPClassifier, feature selector, and scaler are saved to disk using joblib to enable easy loading and use in production.
 
 ## Streamlit App
 
-Create a Streamlit app for interactive predictions (`app.py`).
+An interactive web application is created using Streamlit to make predictions based on user input:
+
+App Development: The app.py file contains the Streamlit code to build an interactive web interface.
+Features:
+Users can upload their CSV files with feature data for prediction.
+Users can enter manual input data for immediate prediction.
+The app displays prediction results and probabilities for both benign and malignant classes.
 
 ## Deployment and Version Control
 
